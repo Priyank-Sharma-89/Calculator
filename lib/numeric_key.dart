@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 class NumericKey extends StatelessWidget {
   final int digit;
   final int flex;
-  final Function displayNumberOnScreen;
+  final Function concatenateDigitToExpression;
 
-  NumericKey(this.digit, {this.displayNumberOnScreen, this.flex});
+  NumericKey(this.digit, {this.concatenateDigitToExpression, this.flex});
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -18,7 +18,7 @@ class NumericKey extends StatelessWidget {
           ),
           height: 100.0,
           onPressed: () {
-            displayNumberOnScreen(digit.toString());
+            concatenateDigitToExpression(digit.toString());
           },
           child: Text(
             "$digit",

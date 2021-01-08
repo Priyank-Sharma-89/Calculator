@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class SpecialSymbolKey extends StatelessWidget {
+class SpecialKeys extends StatelessWidget {
   final int flex;
   final Icon icon;
   final Function performSpecificOperation;
 
-  SpecialSymbolKey(this.icon, {this.flex, this.performSpecificOperation});
+  SpecialKeys(this.icon, {this.flex, this.performSpecificOperation});
   @override
   Widget build(BuildContext context) {
     return Expanded(

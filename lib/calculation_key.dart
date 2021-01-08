@@ -4,15 +4,9 @@ class CalculationKey extends StatelessWidget {
   final Color keyColor;
   final String symbol;
   final int flex;
-  final Function resetValue;
-  final Function operatorCalculation;
-  final Function displayOperatorOnScreen;
+  final Function performOperationOnExpression;
   CalculationKey(this.symbol,
-      {this.flex,
-      this.resetValue,
-      this.keyColor,
-      this.operatorCalculation,
-      this.displayOperatorOnScreen});
+      {this.flex, this.performOperationOnExpression, this.keyColor});
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -25,7 +19,7 @@ class CalculationKey extends StatelessWidget {
           ),
           height: 100.0,
           onPressed: () {
-            resetValue();
+            performOperationOnExpression(symbol);
           },
           child: Text(
             "$symbol",
