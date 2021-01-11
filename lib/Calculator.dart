@@ -46,9 +46,18 @@ class _CalculatorState extends State<Calculator> {
   }
 
   void calculation(String _) {
+    print("inside calc");
     output = output.interpret().toString();
+    print(output);
     expressionResult = output.split('.');
+    int index = expressionResult.length - 1;
     print(expressionResult);
+    print(int.parse(expressionResult[index]).runtimeType);
+    if (int.parse(expressionResult[index]) > 0) {
+      output = output;
+    } else {
+      output = expressionResult[0];
+    }
     firstOperand = output;
 
     secondOperand = null;
