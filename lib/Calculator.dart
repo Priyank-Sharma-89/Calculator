@@ -136,11 +136,14 @@ class _CalculatorState extends State<Calculator> {
                 ),
                 Row(
                   children: [
-                    NumericKey(7,
+                    NumericKey(
+                        digit: 7,
                         concatenateDigitToExpression: getValueOfPressedKey),
-                    NumericKey(8,
+                    NumericKey(
+                        digit: 8,
                         concatenateDigitToExpression: getValueOfPressedKey),
-                    NumericKey(9,
+                    NumericKey(
+                        digit: 9,
                         concatenateDigitToExpression: getValueOfPressedKey),
                     CalculationKey("*",
                         performOperationOnExpression: getOperator),
@@ -148,11 +151,14 @@ class _CalculatorState extends State<Calculator> {
                 ),
                 Row(
                   children: [
-                    NumericKey(4,
+                    NumericKey(
+                        digit: 4,
                         concatenateDigitToExpression: getValueOfPressedKey),
-                    NumericKey(5,
+                    NumericKey(
+                        digit: 5,
                         concatenateDigitToExpression: getValueOfPressedKey),
-                    NumericKey(6,
+                    NumericKey(
+                        digit: 6,
                         concatenateDigitToExpression: getValueOfPressedKey),
                     CalculationKey("-",
                         performOperationOnExpression: getOperator),
@@ -160,11 +166,14 @@ class _CalculatorState extends State<Calculator> {
                 ),
                 Row(
                   children: [
-                    NumericKey(1,
+                    NumericKey(
+                        digit: 1,
                         concatenateDigitToExpression: getValueOfPressedKey),
-                    NumericKey(2,
+                    NumericKey(
+                        digit: 2,
                         concatenateDigitToExpression: getValueOfPressedKey),
-                    NumericKey(3,
+                    NumericKey(
+                        digit: 3,
                         concatenateDigitToExpression: getValueOfPressedKey),
                     CalculationKey(
                       "+",
@@ -175,11 +184,14 @@ class _CalculatorState extends State<Calculator> {
                 Row(
                   children: [
                     NumericKey(
-                      0,
+                      digit: 0,
                       flex: 2,
                       concatenateDigitToExpression: getValueOfPressedKey,
                     ),
-                    CalculationKey("."),
+                    NumericKey(
+                      dotSymbol: ".",
+                      concatenateDigitToExpression: getValueOfPressedKey,
+                    ),
                     CalculationKey("=",
                         keyColor: Colors.orange[800],
                         performOperationOnExpression: calculation),

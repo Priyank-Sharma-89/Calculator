@@ -2,10 +2,15 @@ import 'package:flutter/material.dart';
 
 class NumericKey extends StatelessWidget {
   final int digit;
+  final String dotSymbol;
   final int flex;
   final Function concatenateDigitToExpression;
 
-  NumericKey(this.digit, {this.concatenateDigitToExpression, this.flex});
+  NumericKey(
+      {this.digit,
+      this.dotSymbol,
+      this.concatenateDigitToExpression,
+      this.flex});
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -18,10 +23,12 @@ class NumericKey extends StatelessWidget {
           ),
           height: 100.0,
           onPressed: () {
-            concatenateDigitToExpression(digit.toString());
+            dotSymbol == null
+                ? concatenateDigitToExpression(digit.toString())
+                : concatenateDigitToExpression(dotSymbol);
           },
           child: Text(
-            "$digit",
+            dotSymbol == null ? "$digit" : dotSymbol,
             style: TextStyle(
               color: Colors.white,
               fontSize: 24,
