@@ -24,7 +24,7 @@ class NumericKey extends StatelessWidget {
             "$digit",
             style: TextStyle(
               color: Colors.white,
-              fontSize: 28,
+              fontSize: 24,
             ),
           ),
           color: Theme.of(context).accentColor,

@@ -25,7 +25,7 @@ class CalculationKey extends StatelessWidget {
             "$symbol",
             style: TextStyle(
               color: Colors.white,
-              fontSize: 28,
+              fontSize: 24,
             ),
           ),
           color: keyColor ?? Theme.of(context).primaryColor,
