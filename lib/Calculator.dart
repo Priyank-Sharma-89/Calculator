@@ -67,10 +67,17 @@ class _CalculatorState extends State<Calculator> {
   }
 
   void removeLastCharacter() {
+    print("before output - $output");
+    print("before foperand - $firstOperand");
+    print("before soperand - $secondOperand");
     if (output != null && output.length > 0) {
       output = output.substring(0, output.length - 1);
+      firstOperand = output;
     }
     setState(() {});
+    print("after output - $output");
+    print("after foperand - $firstOperand");
+    print("after soperand - $secondOperand");
   }
 
   @override
