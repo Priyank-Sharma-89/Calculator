@@ -70,14 +70,20 @@ class _CalculatorState extends State<Calculator> {
     print("before output - $output");
     print("before foperand - $firstOperand");
     print("before soperand - $secondOperand");
+    print("before operator - $operator");
     if (output != null && output.length > 0) {
       output = output.substring(0, output.length - 1);
       firstOperand = output;
+      if (firstOperand.endsWith(operator)) {
+        secondOperand = null;
+        firstOperand = firstOperand.substring(0, firstOperand.length - 1);
+      }
     }
     setState(() {});
     print("after output - $output");
     print("after foperand - $firstOperand");
     print("after soperand - $secondOperand");
+    print("after operator - $operator");
   }
 
   @override
